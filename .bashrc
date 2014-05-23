@@ -5,6 +5,7 @@ PATH=$PATH:~/Scripts
 PATH=$PATH:~/Scripts
 PATH=$PATH:~/bin
 PATH=$PATH:~/bin/play-2.2.0
+PATH=$PATH:~/Github/fuzzyterm/
 PATH=$PATH:~/bin/gradle-1.6/bin
 PATH=$PATH:~/bin/android-sdk-macosx/tools
 PATH=$PATH:~/bin/android-sdk-macosx/platform-tools
