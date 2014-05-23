@@ -100,6 +100,7 @@ function youdl-min {
    youtube-dl --format mp4 $1 && terminal-notifier -message "Finished downloading youtube video"
 }
 
+alias notify=terminal-notifier
 source /etc/bash_completion.d/password-store
 
 ### Added by the Heroku Toolbelt
