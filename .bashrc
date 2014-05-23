@@ -102,3 +102,6 @@ source /etc/bash_completion.d/password-store
 # Set environment for gpg-agent
 alias pass-init='eval $(gpg-agent --daemon)'
 
+function pman {
+   man -t $* | ps2pdf - - | open -f -a /Applications/Preview.app
+}
