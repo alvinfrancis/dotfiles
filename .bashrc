@@ -4,7 +4,7 @@ PATH=/opt/local/bin:/opt/local/sbin:$PATH
 PATH=$PATH:~/Scripts
 PATH=$PATH:~/Scripts
 PATH=$PATH:~/bin
-PATH=$PATH:~/bin/play-2.1.0
+PATH=$PATH:~/bin/play-2.2.0
 export PATH
 export EDITOR=/opt/local/bin/vim
 export SURFRAW_browser=elinks
