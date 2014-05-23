@@ -8,6 +8,8 @@ PATH=$PATH:~/bin/play-2.2.0
 PATH=$PATH:~/bin/gradle-1.6/bin
 PATH=$PATH:~/bin/android-sdk-macosx/tools
 PATH=$PATH:~/bin/android-sdk-macosx/platform-tools
+shopt -s histappend
+
 export ANDROID_HOME=~/bin/android-sdk-macosx
 
 export PATH
