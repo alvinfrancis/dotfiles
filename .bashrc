@@ -9,6 +9,8 @@ PATH=$PATH:~/Github/fuzzyterm/
 PATH=$PATH:~/bin/gradle-1.6/bin
 PATH=$PATH:~/bin/android-sdk-macosx/tools
 PATH=$PATH:~/bin/android-sdk-macosx/platform-tools
+PATH=$PATH:~/bin/clojurescript/bin
+
 shopt -s histappend
 
 export ANDROID_HOME=~/bin/android-sdk-macosx
@@ -19,6 +21,7 @@ export SURFRAW_browser=elinks
 export TERM=screen-256color-italic
 export MAIL=/Users/alvin/Mail/Inbox && export MAIL
 export LANG="C" && export LANG
+export CLOJURESCRIPT_HOME=~/bin/clojurescript
 
 # TMUX defaults to screen-256color and newsbeuter has an issue with a 256color TERM
 alias newsbeuter="TERM=xterm-color newsbeuter"
