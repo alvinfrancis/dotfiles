@@ -102,6 +102,9 @@ function youdl-min {
 
 source /etc/bash_completion.d/password-store
 
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
 # Set environment for gpg-agent
 alias pass-init='eval $(gpg-agent --daemon)'
 
