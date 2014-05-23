@@ -1,6 +1,6 @@
 PS1="\[\033[35m\]\t\[\033[m\]-\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]:\$(parse_git_branch)\$ "
 
-PATH=/opt/local/bin:/opt/local/sbin:$PATH
+PATH=/opt/local/lib/postgresql93/bin:/opt/local/bin:/opt/local/sbin:$PATH
 PATH=$PATH:~/Scripts
 PATH=$PATH:~/Scripts
 PATH=$PATH:~/bin
