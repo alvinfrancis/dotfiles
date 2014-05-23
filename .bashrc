@@ -64,6 +64,31 @@ man() {
     man "$@"
 }
 
+# Temp
+alias fuzzy='/Users/alvin/Github/fuzzyterm/fuzzyterm.py'
+alias fvim='fuzzy -c vim'
+
+function fcd {
+   fcdpipe=/tmp/fcdfifo
+   # create a named pipe
+   if [[ ! -p $fcdpipe ]]; then
+      mkfifo $fcdpipe
+   fi
+
+   # echo selection to named pipe
+   # (process must be backgrounded or it will block)
+   fuzzyterm.py --background --output $fcdpipe
+
+   # check fuzzyterm exit code
+   if [[ $? -ne 0 ]]; then
+      rm $fcdpipe
+   else
+      # cd using the selection piped into the named pipe
+      read directory <$fcdpipe
+      cd "$directory"
+   fi
+}
+
 function youdl {
    youtube-dl --max-quality mp4 $1 && terminal-notifier -message "Finished downloading youtube video"
 }
