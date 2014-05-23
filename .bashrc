@@ -5,6 +5,11 @@ PATH=$PATH:~/Scripts
 PATH=$PATH:~/Scripts
 PATH=$PATH:~/bin
 PATH=$PATH:~/bin/play-2.2.0
+PATH=$PATH:~/bin/gradle-1.6/bin
+PATH=$PATH:~/bin/android-sdk-macosx/tools
+PATH=$PATH:~/bin/android-sdk-macosx/platform-tools
+export ANDROID_HOME=~/bin/android-sdk-macosx
+
 export PATH
 export EDITOR=/opt/local/bin/vim
 export SURFRAW_browser=elinks
