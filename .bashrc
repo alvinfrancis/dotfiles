@@ -97,3 +97,8 @@ function youdl-min {
    youtube-dl --format mp4 $1 && terminal-notifier -message "Finished downloading youtube video"
 }
 
+source /etc/bash_completion.d/password-store
+
+# Set environment for gpg-agent
+alias pass-init='eval $(gpg-agent --daemon)'
+
