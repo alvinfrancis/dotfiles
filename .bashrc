@@ -13,6 +13,7 @@ PATH=$PATH:~/bin/clojurescript/bin
 
 shopt -s histappend
 
+export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
 export ANDROID_HOME=~/bin/android-sdk-macosx
 
 export PATH
