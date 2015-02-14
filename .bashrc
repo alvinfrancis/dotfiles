@@ -101,6 +101,10 @@ function youdl-min {
    youtube-dl --format mp4 $1 && terminal-notifier -message "Finished downloading youtube video"
 }
 
+function with_notify {
+   $@ && terminal-notifier -message "$1 success" || terminal-notifier -message "$1 fail"
+}
+
 alias notify=terminal-notifier
 source /etc/bash_completion.d/password-store
 
