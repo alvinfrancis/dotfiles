@@ -97,7 +97,7 @@ function youdl {
    youtube-dl --max-quality mp4 $1 && terminal-notifier -message "Finished downloading youtube video"
 }
 
-function youdl-min {
+function youdl_min {
    youtube-dl --format mp4 $1 && terminal-notifier -message "Finished downloading youtube video"
 }
 
