@@ -38,14 +38,10 @@ bind g:ctrl;cmd grid padding:5 0:8,8
 bind f4:ctrl grid padding:5 0:8,8
 
 # Resize Bindings
-bind right:alt       resize +10% +0
-bind left:alt        resize -10% +0
-bind up:alt          resize +0   -10%
-bind down:alt        resize +0   +10%
-bind right:ctrl;alt  resize -10% +0 bottom-right
-bind left:ctrl;alt   resize +10% +0 bottom-right
-bind up:ctrl;alt     resize +0   +10% bottom-right
-bind down:ctrl;alt   resize +0   -10% bottom-right
+# bind right:ctrl;alt  resize -10% +0 bottom-right
+# bind left:ctrl;alt   resize +10% +0 bottom-right
+# bind up:ctrl;alt     resize +0   +10% bottom-right
+# bind down:ctrl;alt   resize +0   -10% bottom-right
 
 # Push Bindings
 # bind right:ctrl;cmd  push right bar-resize:screenSizeX/3
@@ -63,10 +59,10 @@ bind down:shift;alt  nudge +0   +10%
 bind 1:ctrl;alt         throw 0 resize
 bind 2:ctrl;alt         throw 1 resize
 bind 3:ctrl;alt         throw 2 resize
-bind right:ctrl;alt;cmd throw right resize
-bind left:ctrl;alt;cmd  throw left  resize
-bind up:ctrl;alt;cmd    throw up    resize
-bind down:ctrl;alt;cmd  throw down  resize
+# bind right:ctrl;alt;cmd throw right resize
+# bind left:ctrl;alt;cmd  throw left  resize
+# bind up:ctrl;alt;cmd    throw up    resize
+# bind down:ctrl;alt;cmd  throw down  resize
 
 # Focus Bindings
 # bind right:cmd    focus right
@@ -77,7 +73,7 @@ bind down:ctrl;alt;cmd  throw down  resize
 # bind down:cmd;alt focus behind
 
 # Window Hints
-bind b:ctrl;alt hint
+# bind b:ctrl;alt hint
 
 # Split Bindings
 bind left:ctrl;cmd ${lefthalf}
