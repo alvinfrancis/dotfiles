@@ -69,7 +69,7 @@ man() {
 }
 
 # Temp
-alias fuzzy='/Users/alvin/Github/fuzzyterm/fuzzyterm.py'
+alias fuzzy='/Users/alvin/Github/fuzzyterm/fuzzyterm'
 alias fvim='fuzzy -c vim'
 
 function fcd {
@@ -81,7 +81,7 @@ function fcd {
 
    # echo selection to named pipe
    # (process must be backgrounded or it will block)
-   fuzzyterm.py --background --output $fcdpipe
+   fuzzyterm --background --output $fcdpipe
 
    # check fuzzyterm exit code
    if [[ $? -ne 0 ]]; then
