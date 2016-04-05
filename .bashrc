@@ -34,9 +34,9 @@ alias grep="grep --color=auto"
 alias vi="vim -u NONE"
 
 # Functions
-function parse_git_branch { 
-   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/' 
-} 
+function parse_git_branch {
+   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
 
 
 ## Colored output
