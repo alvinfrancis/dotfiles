@@ -11,6 +11,7 @@ PATH=$PATH:~/bin/android-sdk-macosx/tools
 PATH=$PATH:~/bin/android-sdk-macosx/platform-tools
 PATH=$PATH:~/bin/clojurescript/bin
 
+export BOOT_JVM_OPTIONS="-XX:MaxPermSize=128m -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled"
 export HISTFILESIZE=10000
 shopt -s histappend
 
