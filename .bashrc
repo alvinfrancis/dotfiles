@@ -11,6 +11,7 @@ PATH=$PATH:~/bin/android-sdk-macosx/tools
 PATH=$PATH:~/bin/android-sdk-macosx/platform-tools
 PATH=$PATH:~/bin/clojurescript/bin
 
+export HISTFILESIZE=10000
 shopt -s histappend
 
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
