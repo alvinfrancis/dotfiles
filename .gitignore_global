@@ -61,3 +61,7 @@ pom.xml.asc
 .lein-repl-history
 .lein-plugins/
 .lein-failures
+
+# Emacs #
+#########
+.dir-locals.el
