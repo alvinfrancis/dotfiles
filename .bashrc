@@ -12,7 +12,7 @@ PATH=$PATH:~/bin/android-sdk-macosx/platform-tools
 PATH=$PATH:~/bin/clojurescript/bin
 
 export BOOT_JVM_OPTIONS="-XX:MaxPermSize=128m -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled"
-export HISTFILESIZE=10000
+export HISTFILESIZE=999999
 shopt -s histappend
 
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
@@ -73,6 +73,7 @@ man() {
 # Temp
 alias fuzzy='/Users/alvin/Github/fuzzyterm/fuzzyterm'
 alias fvim='fuzzy -c vim'
+alias gitd='git branch -r | awk '"'"'{print $1}'"'"' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '"'"'{print $1}'"'"''
 
 function fcd {
    fcdpipe=/tmp/fcdfifo
