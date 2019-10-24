@@ -15,16 +15,10 @@ export BOOT_JVM_OPTIONS="-XX:MaxPermSize=128m -XX:+UseConcMarkSweepGC -XX:+CMSCl
 export HISTFILESIZE=999999
 shopt -s histappend
 
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-export ANDROID_HOME=~/bin/android-sdk-macosx
-
 export PATH
-export EDITOR=/opt/local/bin/vim
-export SURFRAW_browser=elinks
-export TERM=screen-256color-italic
+export EDITOR=vim
 export MAIL=/Users/alvin/Mail/Inbox && export MAIL
 export LANG="C" && export LANG
-export CLOJURESCRIPT_HOME=~/bin/clojurescript
 
 # TMUX defaults to screen-256color and newsbeuter has an issue with a 256color TERM
 alias newsbeuter="TERM=xterm-color newsbeuter"
