@@ -113,12 +113,6 @@ function with_notify {
 alias notify=terminal-notifier
 source /etc/bash_completion.d/password-store
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-# Set environment for gpg-agent
-alias pass-init='eval $(gpg-agent --daemon)'
-
 function pman {
    man -t $* | ps2pdf - - | open -f -a /Applications/Preview.app
 }
