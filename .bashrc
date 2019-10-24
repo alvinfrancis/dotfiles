@@ -42,20 +42,22 @@ function parse_git_branch {
 
 
 ## Colored output
-NORMAL=$(tput sgr0)
-GREEN=$(tput setaf 2; tput bold)
-YELLOW=$(tput setaf 3)
-RED=$(tput setaf 1)
+if [[ $- == *i* ]]; then
+  NORMAL=$(tput sgr0)
+  GREEN=$(tput setaf 2; tput bold)
+  YELLOW=$(tput setaf 3)
+  RED=$(tput setaf 1)
+  function red() {
+      echo -e "$RED$*$NORMAL"
+  }
+  function green() {
+      echo -e "$GREEN$*$NORMAL"
+  }
+  function yellow() {
+      echo -e "$YELLOW$*$NORMAL"
+  }
+fi
 
-function red() {
-    echo -e "$RED$*$NORMAL"
-}
-function green() {
-    echo -e "$GREEN$*$NORMAL"
-}
-function yellow() {
-    echo -e "$YELLOW$*$NORMAL"
-}
 
 # Invoke less termcap to add colored info to bold and underline values of
 # termcap
