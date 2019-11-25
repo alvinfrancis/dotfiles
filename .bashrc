@@ -2,14 +2,8 @@ PS1="\[\033[35m\]\t\[\033[m\]-\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;
 
 PATH=/opt/local/lib/postgresql94/bin:/opt/local/bin:/opt/local/sbin:$PATH
 PATH=$PATH:~/Scripts
-PATH=$PATH:~/Scripts
 PATH=$PATH:~/bin
-PATH=$PATH:~/bin/play-2.2.0
 PATH=$PATH:~/Github/fuzzyterm/
-PATH=$PATH:~/bin/gradle-1.6/bin
-PATH=$PATH:~/bin/android-sdk-macosx/tools
-PATH=$PATH:~/bin/android-sdk-macosx/platform-tools
-PATH=$PATH:~/bin/clojurescript/bin
 
 export BOOT_JVM_OPTIONS="-XX:MaxPermSize=128m -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled"
 export HISTFILESIZE=999999
@@ -100,13 +94,29 @@ function youdl_min {
    youtube-dl --format mp4 $1 && terminal-notifier -message "Finished downloading youtube video"
 }
 
-function with_notify {
-   $@ && terminal-notifier -message "$1 success" || terminal-notifier -message "$1 fail"
-}
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
 
-alias notify=terminal-notifier
-source /etc/bash_completion.d/password-store
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
 
-function pman {
-   man -t $* | ps2pdf - - | open -f -a /Applications/Preview.app
-}
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
