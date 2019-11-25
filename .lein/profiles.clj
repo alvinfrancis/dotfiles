@@ -1,0 +1,17 @@
+{:user {:plugins                [[cider/cider-nrepl "0.23.0"]
+                                 [docstring-checker "1.0.0"]
+                                 [jonase/eastwood "0.2.4"]
+                                 [lein-ancient "0.6.15"]
+                                 [lein-bikeshed "0.4.1"]
+                                 [lein-clique "0.1.2" :exclusions [org.clojure/clojure]]
+                                 [lein-cloverage "1.0.10"]
+                                 [lein-codox "0.9.4"]
+                                 [lein-exec "0.3.6"]
+                                 [lein-hiera "0.9.5"]
+                                 [lein-kibit "0.1.5"]
+                                 [lein-nomis-ns-graph "0.14.1"]
+                                 [lein-repetition-hunter "0.1.0-SNAPSHOT"]
+                                 [org.timmc/nephila "0.3.0"]
+                                 [venantius/yagni "0.1.4"]]
+        :dependencies           [[repetition-hunter "1.0.0"]]}
+ :repl {:dependencies [[org.clojure/tools.nrepl "0.2.13"]]}}
