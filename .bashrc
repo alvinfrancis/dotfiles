@@ -120,3 +120,17 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+set -e
+if grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null ; then
+    export DISPLAY=localhost:0.0
+    # Start the docker machine
+    export VBOX_MSI_INSTALL_PATH='/c/Program Files/Oracle/VirtualBox/'
+    pushd '/c/Program Files/Docker Toolbox/' > /dev/null
+    # ./start.sh exit
+    # Get env variables from docker-machine, convert paths, ignore comments, and strip double quotes. 
+    $(./docker-machine.exe env --shell bash 2> /dev/null | sed 's/C:/\/c/' | sed 's/\\/\//g' | sed 's:#.*$::g' | sed 's/"//g' ) 
+    popd > /dev/null
+    # Change /mnt/c/ to /c/ in current working directory path
+    cd $(pwd | sed 's/\/mnt\/c\//\/c\//')
+fi
