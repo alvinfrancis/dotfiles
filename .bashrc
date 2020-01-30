@@ -121,7 +121,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-set -e
 if grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null ; then
     export DISPLAY=localhost:0.0
     # Start the docker machine
