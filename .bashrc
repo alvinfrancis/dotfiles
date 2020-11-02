@@ -1,8 +1,10 @@
 PS1="\[\033[35m\]\t\[\033[m\]-\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]:\$(parse_git_branch)\$ "
+eval "$(starship init bash)"
 
-PATH=/opt/local/lib/postgresql94/bin:/opt/local/bin:/opt/local/sbin:$PATH
-PATH=$PATH:~/Scripts
 PATH=$PATH:~/bin
+PATH=$PATH:~/go/bin
+PATH=$PATH:~/.cargo/bin
+PATH=$PATH:~/.local/bin
 PATH=$PATH:~/Github/fuzzyterm/
 
 export BOOT_JVM_OPTIONS="-XX:MaxPermSize=128m -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled"
@@ -12,7 +14,7 @@ shopt -s histappend
 export PATH
 export EDITOR=vim
 export MAIL=/Users/alvin/Mail/Inbox && export MAIL
-export LANG="C" && export LANG
+export LANG=en_US.utf8
 
 # TMUX defaults to screen-256color and newsbeuter has an issue with a 256color TERM
 alias newsbeuter="TERM=xterm-color newsbeuter"
@@ -132,4 +134,16 @@ if grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null ; then
     popd > /dev/null
     # Change /mnt/c/ to /c/ in current working directory path
     cd $(pwd | sed 's/\/mnt\/c\//\/c\//')
+fi
+
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    # Theming
+    # refresh theme colors to match current wallpaper
+    function rwal {
+        gsettings get org.gnome.desktop.background picture-uri | sed "s;^'file://\(.*\)';\1;" | xargs -I {} wal -i {} -a 80 --backend colorz
+    }
+    if ! [ -z "$BASH_VERSION" -o -z "$PS1" -o -n "$last_command_started_cache" ]; then
+        . /usr/share/undistract-me/long-running.bash
+        notify_when_long_running_commands_finish_install
+    fi
 fi
