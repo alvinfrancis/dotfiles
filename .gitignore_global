@@ -64,3 +64,4 @@ pom.xml.asc
 # Emacs #
 #########
 .dir-locals.el
+.projectile
