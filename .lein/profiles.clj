@@ -1,5 +1,5 @@
 {:user {:plugins                [[cider/cider-nrepl "0.23.0-SNAPSHOT"]
-                                 [com.livingsocial/lein-dependency-check "1.1.4"]
+                                 [com.livingsocial/lein-dependency-check "1.1.5"]
                                  [docstring-checker "1.0.0"]
                                  [jonase/eastwood "0.2.4"]
                                  [lein-ancient "0.6.15"]
