@@ -5,7 +5,6 @@ PATH=$PATH:~/bin
 PATH=$PATH:~/go/bin
 PATH=$PATH:~/.cargo/bin
 PATH=$PATH:~/.local/bin
-PATH=$PATH:~/Github/fuzzyterm/
 
 export BOOT_JVM_OPTIONS="-XX:MaxPermSize=128m -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled"
 export HISTFILESIZE=999999
@@ -129,8 +128,8 @@ if grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null ; then
     export VBOX_MSI_INSTALL_PATH='/c/Program Files/Oracle/VirtualBox/'
     pushd '/c/Program Files/Docker Toolbox/' > /dev/null
     # ./start.sh exit
-    # Get env variables from docker-machine, convert paths, ignore comments, and strip double quotes. 
-    $(./docker-machine.exe env --shell bash 2> /dev/null | sed 's/C:/\/c/' | sed 's/\\/\//g' | sed 's:#.*$::g' | sed 's/"//g' ) 
+    # Get env variables from docker-machine, convert paths, ignore comments, and strip double quotes.
+    $(./docker-machine.exe env --shell bash 2> /dev/null | sed 's/C:/\/c/' | sed 's/\\/\//g' | sed 's:#.*$::g' | sed 's/"//g' )
     popd > /dev/null
     # Change /mnt/c/ to /c/ in current working directory path
     cd $(pwd | sed 's/\/mnt\/c\//\/c\//')
